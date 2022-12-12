@@ -1,19 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container-sm" id="app" style="padding: 2px; max-width: 540px">
+    <div class="componente my-4">
+      <registro-form/>
+    </div>
+    <div class="componente my-4">
+      <login-form/> 
+    </div>
+    <div class="componente my-4">
+    <listado-component />
+    </div>
+    <div class="componente my-4">
+    <menu-entradas/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ListadoComponent from './components/ListadoComponent.vue';
+import LoginForm from './components/LoginForm.vue';
+import MenuEntradas from './components/MenuEntradas.vue';
+import RegistroForm from "./components/RegistroForm.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    RegistroForm,
+    LoginForm,
+    ListadoComponent,
+    MenuEntradas,
+  },
+};
 </script>
 
 <style>
@@ -24,5 +40,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.componente {
+  background-color: rgb(255, 254, 209);
 }
 </style>
