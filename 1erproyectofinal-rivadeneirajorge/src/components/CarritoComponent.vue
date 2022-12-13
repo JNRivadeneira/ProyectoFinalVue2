@@ -32,8 +32,8 @@
             </tr>
         </table>
         <div class="d-grid gap-2 d-flex justify-content-end py-5">
-            <button class="btn btn-dark">Cancelar</button>
-            <button class="btn btn-success">Pagar</button>
+            <button class="btn btn-lg btn-outline-danger">Cancelar</button>
+            <button class="btn btn-lg btn-success">Pagar</button>
         </div>
     </div>
 </template>
