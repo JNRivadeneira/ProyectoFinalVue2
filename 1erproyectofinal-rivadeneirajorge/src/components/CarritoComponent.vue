@@ -47,12 +47,12 @@ export default {
             carritoItems:[
                 {
                     cantidad: 2,
-                    descripcion: "Descripción",
+                    descripcion: "Papas fritas",
                     precioUnitario: 200,
                 },
                 {
                     cantidad: 3,
-                    descripcion: "Otra descripción",
+                    descripcion: "Tabla de quesos",
                     precioUnitario: 50
                 }
             ]
