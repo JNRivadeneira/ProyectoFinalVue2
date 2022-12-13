@@ -1,6 +1,9 @@
 <template>
       <main>
         <h1>Entradas</h1>
+        <div class="d-grip gap-2 d-flex justify-content-end">
+        <button class="btn btn-outline-dark">Ver carrito</button>
+        </div>
         <table :class="cssClasses">
           <tr v-for="(menu, index) of menues" :key="index">
             <td>
@@ -19,6 +22,7 @@
             </td>
           </tr>
         </table>
+        <button class="btn btn-dark btn-lg">Menu</button>
       </main>
     
 </template>
