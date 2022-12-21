@@ -1,5 +1,8 @@
 <template>
-  <div class="container-sm" id="app" style="padding: 2px; max-width: 540px">
+  <div class="container-sm" id="app" style="padding: 2px; max-width: 840px">
+    <div class="componente my-4">
+        <navbar-component />
+    </div>
     <div class="componente my-4">
       <registro-form/>
     </div>
@@ -15,6 +18,7 @@
     <div class="componente my-4">
     <carrito-component/>
     </div>
+    
   </div>
 </template>
 
@@ -23,6 +27,7 @@ import CarritoComponent from './components/CarritoComponent.vue';
 import ListadoComponent from './components/ListadoComponent.vue';
 import LoginForm from './components/LoginForm.vue';
 import MenuEntradas from './components/MenuEntradas.vue';
+import NavbarComponent from './components/NavbarComponent.vue';
 import RegistroForm from "./components/RegistroForm.vue";
 
 export default {
@@ -33,6 +38,7 @@ export default {
     ListadoComponent,
     MenuEntradas,
     CarritoComponent,
+    NavbarComponent,
   },
 };
 </script>
