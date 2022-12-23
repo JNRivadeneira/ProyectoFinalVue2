@@ -19,8 +19,8 @@ export default {
     props: {
         title: String,
         image: String,
-        availableItems: Number,
-        cost: Number,
+        availableItems: String,
+        cost: String,
         description: String,
         shoppingCard: Boolean
     },

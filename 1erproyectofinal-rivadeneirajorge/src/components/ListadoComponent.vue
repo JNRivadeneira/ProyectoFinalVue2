@@ -1,4 +1,5 @@
 <template>
+<!-- con fetch -->
       <main>
         <h1>Menu</h1>
         <table :class="cssClasses">
@@ -32,49 +33,60 @@ export default {
   data() {
     return {
         menues:[
-            {
-                title: "Entradas",
-                image: require("@/assets/img/entradas.jpg"),
-                availableItems: 8,
-                description: "Exercitation nostrud in reprehenderit esse sit eiusmod Lorem aliqua quis Lorem. Elit dolor sit amet culpa commodo. Laboris eu dolore incididunt ex adipisicing mollit aliqua quis ea ea sint ea ad cillum. Sint laboris quis adipisicing aliqua culpa id anim aliquip. Minim consectetur minim ut ut occaecat incididunt dolor.",
+            // {
+            //     title: "Entradas",
+            //     image: require("@/assets/img/entradas.jpg"),
+            //     availableItems: 8,
+            //     description: "Exercitation nostrud in reprehenderit esse sit eiusmod Lorem aliqua quis Lorem. Elit dolor sit amet culpa commodo. Laboris eu dolore incididunt ex adipisicing mollit aliqua quis ea ea sint ea ad cillum. Sint laboris quis adipisicing aliqua culpa id anim aliquip. Minim consectetur minim ut ut occaecat incididunt dolor.",
 
-            },
-            {
-                title: "Pastas",
-                image: require("@/assets/img/pasta.jpg"),
-                availableItems: 12,
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni.",
-            },
-            {
-                title: "Carnes",
-                image: require("@/assets/img/carne.jpg"),
-                availableItems: 20,
-                description: "Enim tempor exercitation esse ad enim officia commodo deserunt magna deserunt aute. Culpa exercitation enim commodo mollit sunt cupidatat. Culpa amet aliquip labore ullamco veniam. Voluptate cillum dolor pariatur voluptate esse. Ex in consectetur ex do enim magna sint labore.",
-            },
-            {
-                title: "Pescados y Mariscos",
-                image: require("@/assets/img/pescados.jpg"),
-                availableItems: 7,
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni.",
-            },
-            {
-                title: "Ensaladas",
-                image: require("@/assets/img/ensaladas.jpg"),
-                availableItems: 6,
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni.",
-            },
-            {
-                title: "Veganos",
-                image: require("@/assets/img/veganos.jpg"),
-                availableItems: 20,
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni.",
-            },
+            // },
+            // {
+            //     title: "Pastas",
+            //     image: require("@/assets/img/pasta.jpg"),
+            //     availableItems: 12,
+            //     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni.",
+            // },
+            // {
+            //     title: "Carnes",
+            //     image: require("@/assets/img/carne.jpg"),
+            //     availableItems: 20,
+            //     description: "Enim tempor exercitation esse ad enim officia commodo deserunt magna deserunt aute. Culpa exercitation enim commodo mollit sunt cupidatat. Culpa amet aliquip labore ullamco veniam. Voluptate cillum dolor pariatur voluptate esse. Ex in consectetur ex do enim magna sint labore.",
+            // },
+            // {
+            //     title: "Pescados y Mariscos",
+            //     image: require("@/assets/img/pescados.jpg"),
+            //     availableItems: 7,
+            //     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni.",
+            // },
+            // {
+            //     title: "Ensaladas",
+            //     image: require("@/assets/img/ensaladas.jpg"),
+            //     availableItems: 6,
+            //     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni.",
+            // },
+            // {
+            //     title: "Veganos",
+            //     image: require("@/assets/img/veganos.jpg"),
+            //     availableItems: 20,
+            //     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni.",
+            // },
         ],
         cssClasses:{
             tableTextColor: true,
             tableBackGndColor: true,
         },
     };
+  },
+  created(){
+    const URLGET="https://6384e61b3fa7acb14f041a45.mockapi.io/api/menues";
+    //fetch recibe una URL y si no aclaramos nada es un GET. Funciona mediante promesas
+    fetch(URLGET)
+        .then(response => response.json())
+        .then(data => {
+            this.menues = data;
+            console.log(data);
+            console.log(this.menues)
+        })
   },
 }
 </script>
