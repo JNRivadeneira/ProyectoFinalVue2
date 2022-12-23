@@ -1,11 +1,13 @@
 <template>
   <div class="carrito">
-    <h1>Carrito PAge</h1>
+    <carrito-component/>
   </div>
 </template>
 
 <script>
+import CarritoComponent from '@/components/CarritoComponent.vue';
 export default {
+  components: { CarritoComponent },
     name: 'CarritoView'
 };
 </script>
