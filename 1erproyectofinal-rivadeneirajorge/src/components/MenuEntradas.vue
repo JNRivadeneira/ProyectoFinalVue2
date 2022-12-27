@@ -6,7 +6,7 @@
         </div>
         <table :class="cssClasses">
           <tr v-for="(plato, index) of entradas" :key="index">
-                <pre>{{plato}}</pre>
+                <!-- <pre>{{entradas}}</pre> -->
             <td>
               <card-component 
                 :title="plato.title" 
@@ -30,6 +30,7 @@
 
 <script>
 import CardComponent from '@/components/CardComponent.vue'
+import axios from 'axios'
 
 export default {
   name: 'MenuEntradas',
@@ -74,14 +75,20 @@ export default {
   created(){
     const URLGET="https://6384e61b3fa7acb14f041a45.mockapi.io/api/platos";
     //fetch recibe una URL y si no aclaramos nada es un GET. Funciona mediante promesas
-    fetch(URLGET)
-        .then(response => response.json())
+    // fetch(URLGET)
+    //     .then(response => response.json())
             
-        .then(data => {
-            console.log(data)
-            this.entradas = data;
-            console.log(`entradas es: ${this.entradas}`);
-        })
+    //     .then(data => {
+    //         console.log(data)
+    //         this.entradas = data;
+    //         console.log(`entradas es: ${this.entradas}`);
+    //     })
+    // Using Axios
+    axios.get(URLGET)
+    .then(response =>{
+        const platos = response.data
+        this.entradas = platos[0].entradas
+    })
   },
   filters: {
     // entradas: (platos) => {
