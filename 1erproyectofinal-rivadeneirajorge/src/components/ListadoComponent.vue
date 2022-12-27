@@ -85,7 +85,6 @@ export default {
         .then(data => {
             this.menues = data;
             console.log(data);
-            console.log(this.menues)
         })
   },
 }
