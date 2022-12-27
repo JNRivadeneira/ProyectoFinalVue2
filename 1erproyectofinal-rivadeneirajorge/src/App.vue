@@ -36,4 +36,23 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+h1 {
+  text-align: center;
+  background-color: blueviolet;
+  color: antiquewhite;
+}
+
+h6 {
+  color: dimgrey;
+  font-family: Ubuntu, sans-serif, cursive;
+}
+
+p{
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(17, 71, 71);
+  margin: 5%;
+  text-align: justify;
+}
+
 </style>

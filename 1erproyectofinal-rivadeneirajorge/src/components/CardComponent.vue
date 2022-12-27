@@ -20,19 +20,9 @@ export default {
         title: String,
         image: String,
         availableItems: String,
-        cost: String,
+        cost: Number,
         description: String,
         shoppingCard: Boolean
-    },
-
-    data() {
-        return {
-            
-        };
-    },
-
-    mounted() {
-        
     },
 
     methods: {

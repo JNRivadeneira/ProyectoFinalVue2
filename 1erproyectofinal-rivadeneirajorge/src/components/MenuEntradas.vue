@@ -6,7 +6,6 @@
         </div>
         <table :class="cssClasses">
           <tr v-for="(plato, index) of entradas" :key="index">
-                <!-- <pre>{{entradas}}</pre> -->
             <td>
               <card-component 
                 :title="plato.title" 
@@ -40,32 +39,7 @@ export default {
   data() {
     return {
         entradas: [],
-        // menues:[
-        //     {
-        //         title: "Tablas de Quesos",
-        //         image: require("@/assets/img/entradas/tablaQuesos.jpg"),
-        //         cost: 10,
-        //         description: "Sunt exercitation officia elit qui officia do ut sunt ullamco incididunt ipsum pariatur cillum. Labore aliqua ipsum incididunt in elit minim duis adipisicing pariatur. Nulla magna in elit Lorem mollit non cillum commodo nostrud laborum consectetur.",
-        //         shoppingCard: true,
-
-        //     },
-        //     {
-        //         title: "Tabla de Fiambres",
-        //         image: require("@/assets/img/entradas/tablaFiambres.jpg"),
-        //         cost: 12,
-        //         description: "Dolor culpa nisi pariatur exercitation culpa quis ullamco aliqua elit. Ea elit dolor mollit dolore nulla laborum excepteur nostrud. Veniam pariatur consequat occaecat laborum dolor consectetur non magna ex. Veniam anim velit duis incididunt amet aliqua pariatur nostrud esse pariatur nulla. Aliquip dolore labore aliqua consectetur. Ut eu magna cillum voluptate quis.",
-        //         shoppingCard: true,
-
-        //     },
-        //     {
-        //         title: "Papas Fritas",
-        //         image: require("@/assets/img/entradas/papasFritas.jpg"),
-        //         cost: 20,
-        //         description: "Est ullamco ut minim tempor voluptate anim pariatur esse labore Lorem dolor culpa. Velit cillum consectetur ad irure consequat dolore duis aliqua proident quis sit sit nulla. Proident tempor est ea eu eu sint incididunt non mollit mollit cillum magna mollit.",
-        //         shoppingCard: true,
-
-        //     },
-        // ],
+        
         cssClasses:{
             tableTextColor: true,
             tableBackGndColor: true,
@@ -105,7 +79,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 h1 {
