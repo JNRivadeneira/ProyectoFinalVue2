@@ -1,8 +1,8 @@
 import es from '@vueform/vueform/locales/es'
-import bootstrap from '@vueform/vueform/themes/bootstrap'
+import vueform from '@vueform/vueform/themes/vueform'
 
 export default {
-  theme: bootstrap,
+  theme: vueform,
   locales: { es },
   locale: 'es',
   apiKey: 'p1uy-g9bu-jyzn-p2nf-obpl',
