@@ -1,6 +1,5 @@
 <template>
-  <!-- <Vueform> -->
-    <form>
+    <Vueform>
     <StaticElement name="titulo"><h1>Crear cuenta</h1></StaticElement>
     <GroupElement name="informacionPersonal" label="Información Personal">
       <TextElement
@@ -48,7 +47,6 @@
       />
     </GroupElement>
 
-<div class="my-4 ">
     <ToggleElement name="notificame" :default="true">
       Quiero recibir correos con ofertas especiales. Podés desuscribirte en
       cualquier momento.
@@ -56,10 +54,10 @@
     <ButtonElement name="crearUsuario" add-class="mt-2" submits>
       Crear
     </ButtonElement>
-    <StaticElement name="linkToLogin"><a href="#login">Ya tengo una cuenta</a></StaticElement>
-</div>
-    </form>
-  <!-- </Vueform> -->
+    <StaticElement name="linkToLogin">
+        <router-link to="/login">Ya tengo una cuenta</router-link>
+    </StaticElement>
+    </Vueform>
 </template>
 
 <script>
@@ -68,74 +66,7 @@ import { Vueform, useVueform } from "@vueform/vueform";
 export default {
   mixins: [Vueform],
   setup: useVueform,
-//   data: () => ({
-    // vueform: {
-    //   schema: {
-    //     personal_information: {
-    //       type: "group",
-    //       label: "Personal information",
-    //       schema: {
-    //         firstname: {
-    //           type: "text",
-    //           placeholder: "First name",
-    //           rules: "required",
-    //           columns: 6,
-    //         },
-    //         lastname: {
-    //           type: "text",
-    //           floating: "Last name",
-    //           placeholder: "Last name",
-    //           rules: "required",
-    //           columns: 6,
-    //         },
-    //       },
-    //     },
-    //     account_information: {
-    //       type: "group",
-    //       label: "Account information",
-    //       schema: {
-    //         email: {
-    //           type: "text",
-    //           placeholder: "Email address",
-    //           rules: "required|email|max:255",
-    //           debounce: 300,
-    //         },
-    //         password: {
-    //           type: "text",
-    //           inputType: "password",
-    //           placeholder: "Password",
-    //           rules: [
-    //             "required",
-    //             "regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/",
-    //             "confirmed",
-    //           ],
-    //           debounce: 300,
-    //           messages: {
-    //             regex:
-    //               "The Password must at least 8 characters long and contain at least one number, one uppercase and one lowercase character.",
-    //           },
-    //         },
-    //         password_confirmation: {
-    //           type: "text",
-    //           inputType: "password",
-    //           placeholder: "Password again",
-    //           rules: "required",
-    //         },
-    //       },
-    //     },
-    //     remember_me: {
-    //       type: "toggle",
-    //       text: "Remember me",
-    //     },
-    //     submit: {
-    //       type: "button",
-    //       buttonLabel: "Register",
-    //       addClass: "mt-2",
-    //       submits: true,
-    //     },
-    //   },
-    // },
-//   }),
+
 };
 </script>
 
